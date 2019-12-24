@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <%- styles%>
+  </head>
+  <body>
+    <div class="topnav">
+      <a class="<%= path === '/users'? 'active' : '' %>" href="/users">Users</a>
+      <a class="<%= path === '/admins'? 'active' : '' %>" href="/admins">Admin</a>
+    </div>
+    <% let footer = '<hr/>' %>
+    <%# let content = 'override content sent from app.js' %>
+    <%- content + footer  %>
+  </body>
+</html>

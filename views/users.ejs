@@ -1,0 +1,25 @@
+<% let styles = `
+    <link rel="stylesheet" href="/css/style.css" />
+    ` 
+%>
+
+<% let content = `
+<div class="content"> 
+    <h1>List of users</h1>
+    <ol>
+        ${
+            (users.length)? 
+            users.map( user => {
+                return `<li>${user}</li>`       
+            }).join('')
+            :
+            `no user yet`
+        }
+    </ol>
+</div>
+` %>
+
+<%- include('base.ejs', {
+    styles: styles, 
+    content: content
+}) %>

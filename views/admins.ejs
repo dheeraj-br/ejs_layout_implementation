@@ -1,0 +1,16 @@
+<% let styles = `
+    <link rel="stylesheet" href="/css/style.css" />
+    ` 
+%>
+
+<% let content = `
+<div class="content"> 
+    <h1>Admin: <small>${admin}</small></h1>
+    
+</div>
+` %>
+
+<%- include('base.ejs', {
+    styles: styles, 
+    content: content
+}) %>

@@ -1,5 +1,12 @@
 # EJS layouts 
 
+#### Install
+`git clone https://github.com/dheeraj-br/ejs_layout_implementation.git`
+
+`npm i`
+
+navigate to `[localhost:3000]/users`
+
 ### Scenario
 EJS does not support blocks; ergo, there is no concept of overriding / prepped / append to block.
 
@@ -73,15 +80,15 @@ app.get('/admins', (req, res, next) => {
 
 #### Explanation of example:
 * app.js 
-    passes three values title, path, admin. 
-    title and path are meant to be used in base.ejs and admin is used in admins.ejs.
+    * passes three values title, path, admin. 
+    * title and path are meant to be used in base.ejs and admin is used in admins.ejs.
 * admins.ejs
-    declares two variables styles and content
-    the two variables contain style tag and div tag respectively, they need to be enclosed in string literals
-    finally there is an includes call passing the two variables to base.ejs
+    * declares two variables styles and content
+    * the two variables contain style tag and div tag respectively, they need to be enclosed in string literals.
+    * Finally there is an includes call passing the two variables to base.ejs
 * base.ejs
-    styles and content variables are passed to base.ejs from admins.ejs
-    base.ejs outputs the variables as html
+    * styles and content variables are passed to base.ejs from admins.ejs
+    * base.ejs outputs the variables as html
 
 #### Capabilities:
 * the variables passed into the child/base can be manipulated with override / append / prepend.
